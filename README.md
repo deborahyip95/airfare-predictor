@@ -149,10 +149,10 @@ SERPAPI_KEY=your_secret_serpapi_key_here
 ```
 
 **Run the Dashboard:** Launch the interactive Streamlit user application:
-```  
+```
 streamlit run src/app.py
 ```
-<!-- TODO: once this repo is published and deployed to Streamlit Community Cloud, add the hosted app link here -->
+Or use the hosted version — no setup required: https://airfare-predictor-singapore.streamlit.app/
 
 **Run the Data Pipeline Locally:** Populate `.env` with `SERPAPI_KEY`, then from the repository root:
 ```
