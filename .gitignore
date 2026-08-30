@@ -1,0 +1,23 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+pricing_env/
+
+# Logs
+logs/
+
+# Raw API dumps and their duplicative archives (dataset.csv is the source of truth;
+# these are regenerated every pipeline run and would otherwise bloat the repo)
+data/raw/
+data/serpapi_response/
+data/dataset_archive/
+data/*.csv
+!data/dataset.csv
+
+# Old model binaries - git's own commit history already versions src/*.joblib,
+# so keeping a second copy here on every run would just bloat the repo
+data/model_archive/

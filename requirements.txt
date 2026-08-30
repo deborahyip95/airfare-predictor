@@ -1,0 +1,14 @@
+# Data Pipeline & API Requirements
+pandas>=2.0.0
+numpy>=1.24.0
+requests>=2.31.0
+google-search-results
+python-dotenv>=1.0.0
+holidays>=0.20.0
+openpyxl>=3.1.0
+
+# Machine Learning & Visualization
+scikit-learn
+joblib>=1.3.0
+scipy>=1.10.0
+streamlit
