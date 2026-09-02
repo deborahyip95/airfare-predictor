@@ -12,6 +12,9 @@ This repository is an upgrade of my original bootcamp capstone, [`singapore-avia
 | **Dataset size** | Static snapshot | Growing dataset - currently 2,083 records and counting |
 | **Documentation** | Manually written metrics | Model-performance section below is auto-updated by `pipeline/update_readme.py` on every run |
 | **Deployment loop** | Manual retrain → manual redeploy | Pipeline commits refreshed data/model back to the repo → Streamlit Community Cloud auto-redeploys |
+| **Train/test split** | Single chronological 80/20 split across the whole dataset | Chronological 80/20 split done independently *within each* `booking_window` bucket, so every window gets holdout coverage instead of some buckets landing entirely on one side of the cut |
+| **Booking window horizon** | Uncapped (bounded only by whatever data had been collected) | Explicitly capped at 182 days (~half a year) via `MAX_SUPPORTED_BOOKING_WINDOW_DAYS`, later widened from an initial 90-day cap as more data accrued |
+| **Holiday ("travel event") window** | Fixed ±2-day buffer around each holiday, plus ad-hoc Sat→Fri / Sun→Mon / Mon→Fri(-3d) adjustments | Day-of-week-aware bridge window computed per weekday the holiday falls on (see `HOLIDAY_DAY_OFFSETS`) |
 
 **A note on model metrics:** the original capstone reported a stronger MAPE (19.3%) and R² (85.3%) - but on a small, static, hand-curated dataset. As this pipeline has scaled up to a larger, continuously-collected sample of live market prices, the honest holdout MAPE has settled closer to the high-20s (see the live metrics below). That's expected: a bigger, noisier, real-world sample is a harder - and more honest - prediction target than a small curated one, and it's the tradeoff this upgrade deliberately makes in exchange for a system that keeps learning instead of going stale.
 
@@ -72,6 +75,12 @@ Milestones achieved *(auto-updated by the scheduled pipeline - last run: 2026-09
 </details>
 <!-- MODEL_METRICS_END -->
 
+### Modeling Methodology
+Three non-obvious design decisions moved between the original capstone (`singapore-aviation-pricing`) and this pipeline - see the [Evolution table](#evolution-from-capstone-analysis-to-production-pipeline) above for a side-by-side summary:
+* **Per-window train/test split:** the capstone used one chronological 80/20 cutoff across the whole dataset, which can leave an entire `booking_window` bucket sitting only on the training side (or only on the holdout side) if that window's records happen to cluster early or late in the collection history. This pipeline instead splits chronologically 80/20 *within each bucket independently*, so every window that has accumulated data gets some holdout coverage - which is what makes the per-bucket MAPE table above possible. See `split_data()` in `pipeline/ml.py`.
+* **182-day booking horizon:** the capstone had no hard cap on how far out a booking window could extend. This pipeline enforces an explicit cap (`MAX_SUPPORTED_BOOKING_WINDOW_DAYS` in `pipeline/process_flight_data.py`), started at 90 days and since widened to 182 days (~half a year) to capture more of the advance-purchase curve airlines use to progressively restrict lower fare classes as departure approaches.
+* **"Travel event" (public holiday) window:** the capstone used a fixed ±2-day buffer around each holiday date, with a few hand-added exceptions for holidays landing on Saturday, Sunday, or Monday. This pipeline replaces that with a day-of-week-aware "bridge day" window: a holiday on Thursday or Friday pulls in the following long weekend, one on Monday or Tuesday pulls in the preceding weekend, and a midweek Wednesday holiday only flags itself. See `HOLIDAY_DAY_OFFSETS` in `pipeline/process_flight_data.py` for the exact per-weekday offsets.
+
 ### Feature Dictionary
 To shift from raw price collection to predictive modeling, the dataset incorporates engineered categorical and temporal layers:
 * **Time-Based Features (Temporal):** 
@@ -83,8 +92,8 @@ To shift from raw price collection to predictive modeling, the dataset incorpora
     * `route`: One-way directional sectors setting baseline pricing coordinates
     * `is_lcc`: Categorical indicator isolating Low-Cost Carriers from Full-Service Carriers
 * **Demand drivers (External Overlays):** 
-    * `is_holiday_sin`: Proximity-buffered flag mapping Singapore Public Holiday demand shocks.
-    * `is_holiday_other`: Proximity-buffered flag mapping destination-specific holiday waves.
+    * `is_holiday_sin`: Bridge-day-aware flag mapping Singapore Public Holiday demand shocks (see [Modeling Methodology](#modeling-methodology))
+    * `is_holiday_other`: Bridge-day-aware flag mapping destination-specific holiday waves (see [Modeling Methodology](#modeling-methodology))
     * `is_sch_holiday`: Custom flag isolating major Singapore school vacation blocks (June and December)
 
 ## The Data Lineage 
