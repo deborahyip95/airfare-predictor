@@ -1,60 +1,60 @@
 {
-  "run_timestamp_utc": "2026-09-01 23:51:11",
-  "n_records": 2667,
-  "n_dev_records": 2129,
-  "n_test_records": 538,
-  "mean_cv_mae_sgd": 223.57,
-  "holdout_mae_sgd": 205.04,
-  "holdout_rmse_sgd": 399.89,
-  "holdout_r2": 0.6998,
-  "holdout_mape_pct": 25.9,
+  "run_timestamp_utc": "2026-09-05 23:37:28",
+  "n_records": 2857,
+  "n_dev_records": 2280,
+  "n_test_records": 577,
+  "mean_cv_mae_sgd": 215.47,
+  "holdout_mae_sgd": 223.3,
+  "holdout_rmse_sgd": 522.67,
+  "holdout_r2": 0.5508,
+  "holdout_mape_pct": 26.1,
   "bucket_mape": {
     "1-14 days": {
-      "mape_pct": 25.7,
+      "mape_pct": 24.7,
       "n_test_records": 106
     },
     "15-28 days": {
-      "mape_pct": 22.1,
-      "n_test_records": 62
+      "mape_pct": 20.2,
+      "n_test_records": 71
     },
     "29-42 days": {
-      "mape_pct": 25.3,
-      "n_test_records": 80
+      "mape_pct": 30.6,
+      "n_test_records": 92
     },
     "43-56 days": {
-      "mape_pct": 30.1,
+      "mape_pct": 34.0,
       "n_test_records": 135
     },
     "57-70 days": {
-      "mape_pct": 16.6,
+      "mape_pct": 16.4,
       "n_test_records": 44
     },
     "71-84 days": {
-      "mape_pct": 20.9,
+      "mape_pct": 18.8,
       "n_test_records": 35
     },
     "85-98 days": {
-      "mape_pct": 22.8,
+      "mape_pct": 31.4,
       "n_test_records": 10
     },
     "99-112 days": {
-      "mape_pct": 24.7,
-      "n_test_records": 11
+      "mape_pct": 32.6,
+      "n_test_records": 21
     },
     "113-126 days": {
-      "mape_pct": 18.3,
+      "mape_pct": 26.9,
       "n_test_records": 19
     },
     "127-140 days": {
-      "mape_pct": 34.0,
-      "n_test_records": 18
+      "mape_pct": 11.4,
+      "n_test_records": 26
     },
     "141-154 days": {
-      "mape_pct": 55.4,
+      "mape_pct": 27.7,
       "n_test_records": 8
     },
     "169-182 days": {
-      "mape_pct": 37.9,
+      "mape_pct": 17.9,
       "n_test_records": 10
     }
   },
