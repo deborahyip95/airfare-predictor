@@ -1,64 +1,64 @@
 {
-  "run_timestamp_utc": "2026-09-16 00:01:27",
-  "n_records": 3251,
-  "n_dev_records": 2595,
-  "n_test_records": 656,
-  "mean_cv_mae_sgd": 233.16,
-  "holdout_mae_sgd": 226.62,
-  "holdout_rmse_sgd": 463.22,
-  "holdout_r2": 0.5289,
-  "holdout_mape_pct": 29.2,
+  "run_timestamp_utc": "2026-09-17 23:57:24",
+  "n_records": 3424,
+  "n_dev_records": 2733,
+  "n_test_records": 691,
+  "mean_cv_mae_sgd": 249.38,
+  "holdout_mae_sgd": 199.24,
+  "holdout_rmse_sgd": 342.41,
+  "holdout_r2": 0.6974,
+  "holdout_mape_pct": 26.5,
   "bucket_mape": {
     "1-14 days": {
-      "mape_pct": 23.3,
+      "mape_pct": 23.7,
       "n_test_records": 128
     },
     "15-28 days": {
-      "mape_pct": 20.3,
+      "mape_pct": 23.6,
       "n_test_records": 71
     },
     "29-42 days": {
-      "mape_pct": 27.2,
-      "n_test_records": 101
+      "mape_pct": 23.4,
+      "n_test_records": 111
     },
     "43-56 days": {
-      "mape_pct": 40.9,
-      "n_test_records": 145
+      "mape_pct": 38.7,
+      "n_test_records": 156
     },
     "57-70 days": {
       "mape_pct": 16.5,
       "n_test_records": 44
     },
     "71-84 days": {
-      "mape_pct": 26.0,
+      "mape_pct": 31.3,
       "n_test_records": 35
     },
     "85-98 days": {
-      "mape_pct": 17.5,
+      "mape_pct": 24.8,
       "n_test_records": 22
     },
     "99-112 days": {
-      "mape_pct": 84.5,
-      "n_test_records": 31
+      "mape_pct": 26.5,
+      "n_test_records": 42
     },
     "113-126 days": {
-      "mape_pct": 21.4,
+      "mape_pct": 22.3,
       "n_test_records": 19
     },
     "127-140 days": {
-      "mape_pct": 14.7,
+      "mape_pct": 14.5,
       "n_test_records": 34
     },
     "141-154 days": {
-      "mape_pct": 11.1,
-      "n_test_records": 8
+      "mape_pct": 10.4,
+      "n_test_records": 11
     },
     "155-168 days": {
-      "mape_pct": 22.0,
+      "mape_pct": 29.5,
       "n_test_records": 8
     },
     "169-182 days": {
-      "mape_pct": 22.9,
+      "mape_pct": 24.9,
       "n_test_records": 10
     }
   },
