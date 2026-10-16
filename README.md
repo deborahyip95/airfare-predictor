@@ -49,7 +49,7 @@ The engine trains a robust Random Forest machine learning model on fare prices b
 
 ### Random Forest Model Performance and Justification
 <!-- MODEL_METRICS_START -->
-Milestones achieved *(auto-updated by the scheduled pipeline - last run: 2026-10-15 00:19:12 UTC; 3962 records used for training/CV, 997 held out for the evaluation below, 4959 total)*:
+Milestones achieved *(auto-updated by the scheduled pipeline - last run: 2026-10-16 00:06:38 UTC; 3962 records used for training/CV, 997 held out for the evaluation below, 4959 total)*:
 * **Holdout Mean Absolute Percentage Error (MAPE):** 27.7%
 * **Holdout Variance Explained (R² Score):** 63.9%
 * **Holdout Root Mean Square Error (RMSE):** $388.78
