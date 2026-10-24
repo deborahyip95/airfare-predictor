@@ -49,28 +49,28 @@ The engine trains a robust Random Forest machine learning model on fare prices b
 
 ### Random Forest Model Performance and Justification
 <!-- MODEL_METRICS_START -->
-Milestones achieved *(auto-updated by the scheduled pipeline - last run: 2026-10-23 00:26:58 UTC; 4120 records used for training/CV, 1037 held out for the evaluation below, 5157 total)*:
-* **Holdout Mean Absolute Percentage Error (MAPE):** 25.5%
-* **Holdout Variance Explained (R² Score):** 68.9%
-* **Holdout Root Mean Square Error (RMSE):** $352.66
+Milestones achieved *(auto-updated by the scheduled pipeline - last run: 2026-10-24 00:18:50 UTC; 4287 records used for training/CV, 1079 held out for the evaluation below, 5366 total)*:
+* **Holdout Mean Absolute Percentage Error (MAPE):** 26.0%
+* **Holdout Variance Explained (R² Score):** 67.2%
+* **Holdout Root Mean Square Error (RMSE):** $369.52
 
 <details><summary>Holdout MAPE by booking window</summary>
 
 | Booking Window | MAPE | Holdout Records |
 |---|---|---|
-| 1-14 days | 26.1% | 169 |
-| 15-28 days | 26.9% | 124 |
-| 29-42 days | 30.9% | 184 |
-| 43-56 days | 29.3% | 164 |
-| 57-70 days | 24.7% | 76 |
-| 71-84 days | 14.6% | 65 |
-| 85-98 days | 16.9% | 52 |
-| 99-112 days | 24.0% | 42 |
-| 113-126 days | 29.9% | 48 |
-| 127-140 days | 18.5% | 50 |
-| 141-154 days | 17.1% | 19 |
-| 155-168 days | 24.0% | 17 |
-| 169-182 days | 16.2% | 27 |
+| 1-14 days | 34.0% | 179 |
+| 15-28 days | 25.9% | 124 |
+| 29-42 days | 27.1% | 184 |
+| 43-56 days | 26.7% | 175 |
+| 57-70 days | 26.4% | 76 |
+| 71-84 days | 17.0% | 76 |
+| 85-98 days | 16.6% | 52 |
+| 99-112 days | 23.8% | 42 |
+| 113-126 days | 27.0% | 48 |
+| 127-140 days | 14.9% | 50 |
+| 141-154 days | 34.3% | 29 |
+| 155-168 days | 24.5% | 17 |
+| 169-182 days | 20.6% | 27 |
 
 *A bucket with few holdout records is a less reliable estimate of accuracy - not every 14-day window has accumulated enough data yet.*
 </details>
