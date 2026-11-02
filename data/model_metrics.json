@@ -1,64 +1,64 @@
 {
-  "run_timestamp_utc": "2026-10-29 01:36:20",
-  "n_records": 5759,
-  "n_dev_records": 4601,
-  "n_test_records": 1158,
-  "mean_cv_mae_sgd": 245.98,
-  "holdout_mae_sgd": 204.71,
-  "holdout_rmse_sgd": 357.82,
-  "holdout_r2": 0.6921,
-  "holdout_mape_pct": 26.2,
+  "run_timestamp_utc": "2026-11-02 01:19:54",
+  "n_records": 5946,
+  "n_dev_records": 4752,
+  "n_test_records": 1194,
+  "mean_cv_mae_sgd": 245.94,
+  "holdout_mae_sgd": 217.93,
+  "holdout_rmse_sgd": 381.65,
+  "holdout_r2": 0.65,
+  "holdout_mape_pct": 26.9,
   "bucket_mape": {
     "1-14 days": {
-      "mape_pct": 28.0,
-      "n_test_records": 189
+      "mape_pct": 28.2,
+      "n_test_records": 199
     },
     "15-28 days": {
-      "mape_pct": 35.2,
+      "mape_pct": 33.8,
       "n_test_records": 136
     },
     "29-42 days": {
-      "mape_pct": 33.9,
-      "n_test_records": 195
+      "mape_pct": 25.0,
+      "n_test_records": 205
     },
     "43-56 days": {
-      "mape_pct": 24.5,
+      "mape_pct": 26.6,
       "n_test_records": 186
     },
     "57-70 days": {
-      "mape_pct": 22.1,
-      "n_test_records": 76
+      "mape_pct": 18.9,
+      "n_test_records": 86
     },
     "71-84 days": {
       "mape_pct": 16.2,
       "n_test_records": 86
     },
     "85-98 days": {
-      "mape_pct": 16.2,
+      "mape_pct": 15.8,
       "n_test_records": 61
     },
     "99-112 days": {
-      "mape_pct": 24.2,
+      "mape_pct": 30.6,
       "n_test_records": 42
     },
     "113-126 days": {
-      "mape_pct": 27.1,
+      "mape_pct": 43.8,
       "n_test_records": 56
     },
     "127-140 days": {
-      "mape_pct": 14.7,
+      "mape_pct": 20.3,
       "n_test_records": 50
     },
     "141-154 days": {
-      "mape_pct": 28.4,
+      "mape_pct": 24.0,
       "n_test_records": 37
     },
     "155-168 days": {
-      "mape_pct": 20.9,
-      "n_test_records": 17
+      "mape_pct": 32.6,
+      "n_test_records": 23
     },
     "169-182 days": {
-      "mape_pct": 12.9,
+      "mape_pct": 54.0,
       "n_test_records": 27
     }
   },
