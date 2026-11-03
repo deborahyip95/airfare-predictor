@@ -1,64 +1,64 @@
 {
-  "run_timestamp_utc": "2026-11-02 01:19:54",
-  "n_records": 5946,
-  "n_dev_records": 4752,
-  "n_test_records": 1194,
-  "mean_cv_mae_sgd": 245.94,
-  "holdout_mae_sgd": 217.93,
-  "holdout_rmse_sgd": 381.65,
-  "holdout_r2": 0.65,
-  "holdout_mape_pct": 26.9,
+  "run_timestamp_utc": "2026-11-03 03:21:34",
+  "n_records": 6140,
+  "n_dev_records": 4906,
+  "n_test_records": 1234,
+  "mean_cv_mae_sgd": 221.79,
+  "holdout_mae_sgd": 219.54,
+  "holdout_rmse_sgd": 382.06,
+  "holdout_r2": 0.6604,
+  "holdout_mape_pct": 28.3,
   "bucket_mape": {
     "1-14 days": {
-      "mape_pct": 28.2,
-      "n_test_records": 199
+      "mape_pct": 28.4,
+      "n_test_records": 209
     },
     "15-28 days": {
-      "mape_pct": 33.8,
+      "mape_pct": 42.0,
       "n_test_records": 136
     },
     "29-42 days": {
-      "mape_pct": 25.0,
-      "n_test_records": 205
+      "mape_pct": 36.5,
+      "n_test_records": 218
     },
     "43-56 days": {
-      "mape_pct": 26.6,
+      "mape_pct": 27.9,
       "n_test_records": 186
     },
     "57-70 days": {
-      "mape_pct": 18.9,
+      "mape_pct": 22.8,
       "n_test_records": 86
     },
     "71-84 days": {
-      "mape_pct": 16.2,
+      "mape_pct": 15.0,
       "n_test_records": 86
     },
     "85-98 days": {
-      "mape_pct": 15.8,
-      "n_test_records": 61
+      "mape_pct": 16.6,
+      "n_test_records": 70
     },
     "99-112 days": {
-      "mape_pct": 30.6,
+      "mape_pct": 23.4,
       "n_test_records": 42
     },
     "113-126 days": {
-      "mape_pct": 43.8,
+      "mape_pct": 24.1,
       "n_test_records": 56
     },
     "127-140 days": {
-      "mape_pct": 20.3,
+      "mape_pct": 13.9,
       "n_test_records": 50
     },
     "141-154 days": {
-      "mape_pct": 24.0,
+      "mape_pct": 39.0,
       "n_test_records": 37
     },
     "155-168 days": {
-      "mape_pct": 32.6,
-      "n_test_records": 23
+      "mape_pct": 23.2,
+      "n_test_records": 31
     },
     "169-182 days": {
-      "mape_pct": 54.0,
+      "mape_pct": 20.9,
       "n_test_records": 27
     }
   },
